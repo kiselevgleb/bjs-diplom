@@ -6,7 +6,7 @@ userForm1.loginFormCallback = data => ApiConnector.login(data, response => {
         location.reload();
         console.log(`OK`);
     } else {
-        userForm1.setLoginErrorMessage("Error login");
+        userForm1.setLoginErrorMessage(response.data);
     }
 });
 
@@ -15,6 +15,6 @@ userForm1.registerFormCallback = data => ApiConnector.register(data, response =>
         location.reload();
         console.log(`OK`);
     } else {
-        userForm1.setRegisterErrorMessage("Error registation");
+        userForm1.setRegisterErrorMessage(response.data);
     }
 });
